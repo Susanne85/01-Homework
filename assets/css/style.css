@@ -1,0 +1,144 @@
+** {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+.header h1 .seo {
+    color: #d9dcd6;
+}
+
+.menu {
+    padding-top: 25px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Logo class shows the company image make it an img in html so that an alt attribute can be put on it. */
+.logo img {
+    width:100%;
+    height:800px;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container is the flex container for the content and benefits boxes */ 
+.container {
+    display:flex;
+    flex-flow: row wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content {
+    flex: 1 1 75%;
+}
+
+.content-box {
+    height: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.content-box h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.content-box img {
+    margin-top: 15px;
+    margin-right: 25px;
+    max-height: 200px;
+}
+
+/* Float classes are for putting the images either left or right in the content box */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* Benefits classes hold the styles for the block which is on the right hand side of the content block */
+
+.benefits {
+    flex: 1 1 20%;
+}
+
+.benefits-box {
+    padding: 22px;
+    background-color:  #0072bb;
+    color: #ffffff;
+}
+
+.benefits-box h3 {
+    text-align: center;
+}
+
+/* Change the image to block so that image can be centred */
+.benefits-box img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px; 
+    max-width: 150px;
+}
+
+/* To improve accessibilty change the flex direction to column when max width of the device is less than the specified max-width */
+@media screen and (max-width: 1220px) {
+    /* Use flex-flow to change to column  wrap */
+    .container  {
+        display:flex;
+        flex-flow: column wrap;
+    }
+  }
+
+  /* Reset the font-family */
+  
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
